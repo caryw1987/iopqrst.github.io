@@ -1,3 +1,10 @@
+---
+title: Markdown 学习页面
+layout: page
+date: 2014-12-18
+modifiedOn: 2014-12-18
+---
+
 ## Welcome to MarkdownPad 2 ##
 ## Welcome to MarkdownPad 2 ##
 
