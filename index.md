@@ -3,6 +3,7 @@ layout: homepage
 title: 以后这就是我的blog啦
 date: 2015-04-16
 modifiedOn: 2015-04-16
+remark: 难道layout上的homepage对应上了homepage.html中，而这里都是变量信息？
 ---
 	
 <h2 id="introduction">导论</h2>
