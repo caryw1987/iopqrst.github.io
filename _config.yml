@@ -3,13 +3,13 @@ redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]   
 highlighter: pygments
 permalink: none
-sitename: JavaScript 标准参考教程（alpha）
+sitename: 这里是网站的名称
 
 chapters:
-- introduction
-- grammar
-- stdlib
-- oop
+- introduction 1
+- grammar 2
+- stdlib 3
+- oop 4
 - dom 
 - bom
 - htmlapi
@@ -20,11 +20,11 @@ chapters:
 - library
 - nodejs
 
-introduction: 导论
-grammar: 基本语法
-stdlib: 标准库
-oop: 面向对象编程
-dom: DOM
+introduction: 导论 1
+grammar: 基本语法 2
+stdlib: 标准库 3
+oop: 面向对象编程 4
+dom: DOM 5
 bom: 浏览器对象
 htmlapi: HTML网页的API
 jquery: jQuery
