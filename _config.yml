@@ -6,30 +6,17 @@ permalink: none
 sitename: 这里是网站的名称
 
 chapters:
-- introduction 1
-- grammar 2
-- stdlib 3
-- oop 4
-- dom 
-- bom
-- htmlapi
-- jquery
-- tool
-- advanced
-- appendix
-- library
-- nodejs
+- hou1
+- hou2
+- hou3
+- hou4
+- hou5
+- hou6
 
-introduction: 导论 1
-grammar: 基本语法 2
-stdlib: 标准库 3
-oop: 面向对象编程 4
-dom: DOM 5
-bom: 浏览器对象
-htmlapi: HTML网页的API
-jquery: jQuery
-library: 草稿一：函数库
-nodejs: 草稿二：Node.js
-tool: 开发工具
-advanced: 高级语法
-appendix: 附录
+hou1: [hou1]
+hou2: [hou2]
+hou3: [hou3]
+hou4: [hou4]
+hou5: [hou5]
+hou6: [hou6]
+
