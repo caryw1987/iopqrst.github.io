@@ -1,1 +1,1 @@
-A open JavaScript tutorial book, focusing on client devices, written in Chinese.
+我要在原有的基础之上修改成我自己的一个blog.
