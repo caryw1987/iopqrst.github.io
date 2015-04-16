@@ -1,16 +1,16 @@
 ---
-title: CommonJS¹æ·¶
+title: CommonJSè§„èŒƒ
 layout: page
 category: myself
 date: 2015-04-17
 modifiedOn: 2015-04-17
 ---
 
-## ¸ÅÊö
+## æ¦‚è¿°
 
-CommonJSÊÇ·þÎñÆ÷¶ËÄ£¿éµÄ¹æ·¶£¬Node.js²ÉÓÃÁËÕâ¸ö¹æ·¶¡£
+CommonJSæ˜¯æœåŠ¡å™¨ç«¯æ¨¡å—çš„è§„èŒƒï¼ŒNode.jsé‡‡ç”¨äº†è¿™ä¸ªè§„èŒƒã€‚
 
-¸ù¾ÝCommonJS¹æ·¶£¬Ò»¸öµ¥¶ÀµÄÎÄ¼þ¾ÍÊÇÒ»¸öÄ£¿é¡£Ã¿Ò»¸öÄ£¿é¶¼ÊÇÒ»¸öµ¥¶ÀµÄ×÷ÓÃÓò£¬Ò²¾ÍÊÇËµ£¬ÔÚ¸ÃÄ£¿éÄÚ²¿¶¨ÒåµÄ±äÁ¿£¬ÎÞ·¨±»ÆäËûÄ£¿é¶ÁÈ¡£¬³ý·Ç¶¨ÒåÎªglobal¶ÔÏóµÄÊôÐÔ¡£
+æ ¹æ®CommonJSè§„èŒƒï¼Œä¸€ä¸ªå•ç‹¬çš„æ–‡ä»¶å°±æ˜¯ä¸€ä¸ªæ¨¡å—ã€‚æ¯ä¸€ä¸ªæ¨¡å—éƒ½æ˜¯ä¸€ä¸ªå•ç‹¬çš„ä½œç”¨åŸŸï¼Œä¹Ÿå°±æ˜¯è¯´ï¼Œåœ¨è¯¥æ¨¡å—å†…éƒ¨å®šä¹‰çš„å˜é‡ï¼Œæ— æ³•è¢«å…¶ä»–æ¨¡å—è¯»å–ï¼Œé™¤éžå®šä¹‰ä¸ºglobalå¯¹è±¡çš„å±žæ€§ã€‚
 
 ```javascript
 
@@ -18,7 +18,7 @@ global.warming = true;
 
 ```
 
-ÉÏÃæ´úÂëµÄwaiming±äÁ¿£¬¿ÉÒÔ±»ËùÓÐÄ£¿é¶ÁÈ¡¡£µ±È»£¬ÕâÑù×öÊÇ²»ÍÆ¼ö£¬Êä³öÄ£¿é±äÁ¿µÄ×îºÃ·½·¨ÊÇÊ¹ÓÃmodule.exports¶ÔÏó¡£
+ä¸Šé¢ä»£ç çš„waimingå˜é‡ï¼Œå¯ä»¥è¢«æ‰€æœ‰æ¨¡å—è¯»å–ã€‚å½“ç„¶ï¼Œè¿™æ ·åšæ˜¯ä¸æŽ¨èï¼Œè¾“å‡ºæ¨¡å—å˜é‡çš„æœ€å¥½æ–¹æ³•æ˜¯ä½¿ç”¨module.exportså¯¹è±¡ã€‚
 
 ```javascript
 
@@ -34,9 +34,9 @@ module.exports = function () {
 
 ```
 
-ÉÏÃæ´úÂëÍ¨¹ýmodule.exports¶ÔÏó£¬¶¨ÒåÁËÒ»¸öº¯Êý£¬¸Ãº¯Êý¾ÍÊÇÄ£¿éÍâ²¿ÓëÄÚ²¿Í¨ÐÅµÄÇÅÁº¡£
+ä¸Šé¢ä»£ç é€šè¿‡module.exportså¯¹è±¡ï¼Œå®šä¹‰äº†ä¸€ä¸ªå‡½æ•°ï¼Œè¯¥å‡½æ•°å°±æ˜¯æ¨¡å—å¤–éƒ¨ä¸Žå†…éƒ¨é€šä¿¡çš„æ¡¥æ¢ã€‚
 
-¼ÓÔØÄ£¿éÊ¹ÓÃrequire·½·¨£¬¸Ã·½·¨¶ÁÈ¡Ò»¸öÎÄ¼þ²¢Ö´ÐÐ£¬×îºó·µ»ØÎÄ¼þÄÚ²¿µÄmodule.exports¶ÔÏó¡£¼Ù¶¨ÓÐÒ»¸öÒ»¸ö¼òµ¥µÄÄ£¿éexample.js¡£
+åŠ è½½æ¨¡å—ä½¿ç”¨requireæ–¹æ³•ï¼Œè¯¥æ–¹æ³•è¯»å–ä¸€ä¸ªæ–‡ä»¶å¹¶æ‰§è¡Œï¼Œæœ€åŽè¿”å›žæ–‡ä»¶å†…éƒ¨çš„module.exportså¯¹è±¡ã€‚å‡å®šæœ‰ä¸€ä¸ªä¸€ä¸ªç®€å•çš„æ¨¡å—example.jsã€‚
 
 {% highlight javascript %}
 
@@ -56,7 +56,7 @@ exports.say = function () {
 
 {% endhighlight %}
 
-## ²Î¿¼Á´½Ó
+## å‚è€ƒé“¾æŽ¥
 
 - Addy Osmani, [Writing Modular JavaScript With AMD, CommonJS & ES Harmony](http://addyosmani.com/writing-modular-js/)
 - Pony Foo, [A Gentle Browserify Walkthrough](http://blog.ponyfoo.com/2014/08/25/a-gentle-browserify-walkthrough)
