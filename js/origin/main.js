@@ -24,7 +24,7 @@ jQuery(document).ready(function(){
 				'container': 'article'
 			});
 
-			$('#toc ul li.toc-h2').clone().appendTo("nav section li.nav-3 ul");
+			//$('#toc ul li.toc-h2').clone().appendTo("nav section li.nav-3 ul");
 			
 			$('#toc').before('<h2>目录</h2>');
 
