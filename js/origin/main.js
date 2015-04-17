@@ -23,7 +23,9 @@ jQuery(document).ready(function(){
 				'selectors': 'h2,h3,h4', //elements to use as headings
 				'container': 'article'
 			});
-
+			
+			console.info($('#toc ul li.toc-h2').clone());
+			
 			$('#toc ul li.toc-h2').clone().appendTo("nav section li.nav-3 ul");
 			
 			$('#toc').before('<h2>目录</h2>');
