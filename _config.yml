@@ -13,6 +13,7 @@ chapters:
 - htmlapi
 - tool
 - nodejs
+- myself
 
 introduction: 导论
 oop: 面向对象编程
@@ -21,3 +22,4 @@ bom: 浏览器对象
 htmlapi: HTML网页的API
 nodejs: 草稿二：Node.js
 tool: 开发工具
+myself: 临时（我自己）
