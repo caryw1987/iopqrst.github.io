@@ -7,7 +7,7 @@ jQuery(document).on('click',"header a",function(e){
 jQuery(document).on('click',"#toc a",function(e){
 	$('header')
 	.animate({marginBottom:150},200)
-	.animate({marginBottom:30},200);
+	.animate({marginBottom:30},200)
  	.animate({width:0,height:0,opacity:0},700)
 	.animate({width:"100%",height:"100%",opacity:1}, 700);
 });
