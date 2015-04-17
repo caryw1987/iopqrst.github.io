@@ -24,7 +24,7 @@ jQuery(document).ready(function(){
 		'container': 'article'
 	});
 			
-	console.info($('#toc ul li.toc-h2'));
+	//console.info($('#toc ul li.toc-h2'));
 	
 	$('#toc ul li.toc-h2').clone().appendTo("nav section li.nav-3 ul");
 	
