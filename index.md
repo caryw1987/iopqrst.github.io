@@ -86,12 +86,12 @@ remark: 难道layout上的homepage对应上了homepage.html中，而这里都是
 - [Cluster模块](nodejs/cluster.html)
 - [OS模块](nodejs/os.html)
 - [Net模块和DNS模块](nodejs/net.html)
-- [Express框架](nodejs/express.html)
+- [Express框架 lalala](nodejs/express.html)
 
 <h2 id="myself">我自己做测试的部分</h2>
 
-- [CommonJS规范](myself/commonjs.md)
-- [接口评估](myself/interface.md)
+- [CommonJS规范](myself/commonjs.html)
+- [接口评估](myself/interface.html)
 
 {% comment %}
 
