@@ -5,13 +5,16 @@
 	<div class="row">
 		<div class="twelve columns">
 			<h1>{{ page.title }} - </h1>
-			<p>英文标题：monkey like code ... </p>
-			<p>变量测试：{{page.remark}} | 试试证明还真是</p>
-			<p>作者：<a href="http://www.henmimang.com">哈哈... </a></p>
-			<p>授权方式：<a href="/introduction/license.html"> 这里是什么授权方式的 。。。 创意共享“署名-非商业性使用”</a></p>
+			<p>英文标题：{{ page.title_en }} </p>
+			<p>作者：<a href="http://iopqrst.github.io/about-me"> houzhiqing </a></p>
+			<p>授权方式：<a href="/introduction/license.html">创意共享“署名-非商业性使用”</a></p>
 			
 			<aside class="annoucement">
-				<p>重要说明：巴拉巴拉巴拉巴拉。。。。。（2015.04.16）</p>
+				<h3>重要说明({{ page.date }})：</h3>
+				<p>
+					1、文章中提到的观点都属个人观点，不喜勿喷。<br/>
+					2、博客风格来自 阮一峰 的<a href="https://github.com/ruanyf/jstutorial">jstutorial</a>
+				</p>
 			</aside> 
 
 			{% include toc.html %}
