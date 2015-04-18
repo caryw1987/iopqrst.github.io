@@ -3,23 +3,15 @@ redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]   
 highlighter: pygments
 permalink: none
-sitename: 这里是网站的名称
+sitename: 代码段
 
 chapters:
 - introduction
 - oop
 - dom 
-- bom
-- htmlapi
-- tool
-- nodejs
 - myself
 
 introduction: 导论
 oop: 面向对象编程
 dom: DOM
-bom: 浏览器对象
-htmlapi: HTML网页的API
-nodejs: 草稿二：Node.js
-tool: 开发工具
 myself: 临时（我自己）
