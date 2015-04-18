@@ -1,7 +1,7 @@
 ---
 layout: homepage
 title: 以后这就是我的blog啦 :)
-title_en: yi hou zhe jiu shi wo de bo ke le :)
+title_en: Yi hou zhe jiu shi wo de bo ke le :)
 date: 2015-04-16
 modifiedOn: 2015-04-16
 ---

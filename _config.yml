@@ -7,11 +7,7 @@ sitename: 代码段
 
 chapters:
 - introduction
-- oop
-- dom 
 - myself
 
 introduction: 导论
-oop: 面向对象编程
-dom: DOM
 myself: 临时（我自己）
