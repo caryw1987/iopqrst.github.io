@@ -8,6 +8,8 @@ sitename: 代码段
 chapters:
 - introduction
 - myself
+- boss
 
 introduction: 导论
 myself: 临时（我自己）
+boss: 如我我是一个老板

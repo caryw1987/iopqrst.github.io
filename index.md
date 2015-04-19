@@ -12,10 +12,16 @@ modifiedOn: 2015-04-16
 - [为什么学习JavaScript？](introduction/why.html)
 - [JavaScript的历史](introduction/history.html)
 
-<h2 id="myself">我自己做测试的部分</h2>
+<h2 id="code">代码搜集</h2>
 
-- [CommonJS规范](myself/commonjs.html)
-- [接口评估](myself/interface.html)
+- [javascript 部分](code/javascript.html)
+- [java](code/java.html)
+- [other](code/other.html)
+
+<h2 id="nonsense">扯淡闲聊</h2>
+
+- [如果我是一个老板](nonsense/commonjs.html)
+- [我应该从现有项目上吸取什么教训](nonsense/what-should-i-learn-from-the-existing-project.html)
 
 {% comment %}
 
