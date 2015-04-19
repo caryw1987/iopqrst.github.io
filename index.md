@@ -12,7 +12,7 @@ modifiedOn: 2015-04-16
 - [为什么学习JavaScript？](introduction/why.html)
 - [JavaScript的历史](introduction/history.html)
 
-<h2 id="code">代码搜集</h2>
+<h2 id="code">代码段搜集</h2>
 
 - [javascript 部分](code/javascript.html)
 - [java](code/java.html)

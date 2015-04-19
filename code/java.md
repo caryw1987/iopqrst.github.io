@@ -1,7 +1,7 @@
 ---
 title: 接口评估
 layout: page
-category: myself
+category: code
 date: 2015-04-17
 modifiedOn: 2015-04-17
 ---
