@@ -20,7 +20,7 @@ modifiedOn: 2015-04-16
 
 <h2 id="nonsense">谈天说地</h2>
 
-- [如果我是一个老板](nonsense/.html)
+- [如果我是一个老板](nonsense/if-i-were-a-boss.html)
 - [我应该从现有项目上吸取什么教训](nonsense/what-should-i-learn-from-the-existing-project.html)
 
 {% comment %}

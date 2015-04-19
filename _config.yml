@@ -8,8 +8,8 @@ sitename: 代码段
 chapters:
 - introduction
 - code
-- boss
+- nonsense
 
 introduction: 导论
 code: 代码段搜集
-boss: 谈天说地
+nonsense: 谈天说地
