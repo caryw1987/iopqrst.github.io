@@ -18,9 +18,9 @@ modifiedOn: 2015-04-16
 - [java](code/java.html)
 - [other](code/other.html)
 
-<h2 id="nonsense">扯淡闲聊</h2>
+<h2 id="nonsense">谈天说地</h2>
 
-- [如果我是一个老板](nonsense/commonjs.html)
+- [如果我是一个老板](nonsense/.html)
 - [我应该从现有项目上吸取什么教训](nonsense/what-should-i-learn-from-the-existing-project.html)
 
 {% comment %}
