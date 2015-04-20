@@ -36,8 +36,14 @@ modifiedOn: 2015-04-17
    
 
   to myself : 服药记录要对应上服药提醒，方便一同处理
+
+```java
+StringEscapeUtils.escapeJava("参数信息不正确") --> \u53C2\u6570\u4FE1\u606F\u683C\u5F0F\u4E0D\u6B63\u786E
+
+System.out.println('ni hao ');
+```
   
   
- 
+
 	
 	
