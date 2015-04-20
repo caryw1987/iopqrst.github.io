@@ -1,27 +1,27 @@
 {
-  "name": "jstutorial",
+  "name": "coder",
   "version": "0.5.0",
-  "description": "JavaScript 标准参考教程",
+  "description": "代码段-以后这就是我的博客了",
   "main": "index.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ruanyf/jstutorial.git"
+    "url": "https://github.com/iopqrst/iopqrst.github.io.git"
   },
   "keywords": [
     "JavaScript"
   ],
-  "author": "阮一峰",
+  "author": "HouZhiqing",
   "license": "Creative Commons Attribution-NonCommercial license",
   "bugs": {
-    "url": "https://github.com/ruanyf/jstutorial/issues"
+    "url": "https://github.com/iopqrst/iopqrst.github.io/issues"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-uglify": "~0.3.0",
-    "grunt-contrib-cssmin": "~0.7.0"
+    "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1"
   }
 }
