@@ -1,5 +1,5 @@
 ---
-title: CommonJS规范
+title: linux 常用
 layout: page
 category: code
 date: 2015-04-17

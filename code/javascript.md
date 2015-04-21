@@ -1,14 +1,14 @@
 ---
-title: CommonJS规范
+title: javascript-代码段
 layout: page
 category: code
-date: 2015-04-17
-modifiedOn: 2015-04-17
+date: 2015-04-21
+modifiedOn: 2015-04-21
 ---
 
-## 概述
+## apply、call 和 bind 的区别
 
-CommonJS是服务器端模块的规范，Node.js采用了这个规范。
+### apply 使用
 
 根据CommonJS规范，一个单独的文件就是一个模块。每一个模块都是一个单独的作用域，也就是说，在该模块内部定义的变量，无法被其他模块读取，除非定义为global对象的属性。
 
@@ -17,6 +17,7 @@ CommonJS是服务器端模块的规范，Node.js采用了这个规范。
 global.warming = true;
 
 ```
+### call 使用
 
 上面代码的waiming变量，可以被所有模块读取。当然，这样做是不推荐，输出模块变量的最好方法是使用module.exports对象。
 
@@ -33,6 +34,7 @@ module.exports = function () {
 };
 
 ```
+### bind 使用
 
 上面代码通过module.exports对象，定义了一个函数，该函数就是模块外部与内部通信的桥梁。
 
@@ -56,7 +58,54 @@ exports.say = function () {
 
 {% endhighlight %}
 
+
+## javascript class 实现操作
+
+### 方式一 最基本的方式
+
+````javascript
+
+function addClass() {
+	
+}
+
+function removeClass() {
+	
+}
+
+function hasClass() {
+	
+}
+
+````
+
+### 方式二 扩展 classList 实现
+
+```javascript
+
+function addClass() {
+	
+}
+
+
+````
+
 ## 参考链接
 
 - Addy Osmani, [Writing Modular JavaScript With AMD, CommonJS & ES Harmony](http://addyosmani.com/writing-modular-js/)
 - Pony Foo, [A Gentle Browserify Walkthrough](http://blog.ponyfoo.com/2014/08/25/a-gentle-browserify-walkthrough)
+- 血糖高管,[xtgg.com](http://www.xtgg.com)
+- 云健康, [bskcare.com]
+
+
+
+
+
+
+
+
+
+
+
+
+[bskcare.com]: http://www.bskcare.com "云健康系统"
