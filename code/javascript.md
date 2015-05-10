@@ -93,6 +93,22 @@ function addClass() {
 
 ````
 
+### 获取 m 到 n 之间的整数随机数
+
+```javascript
+// 包含m, 不包含n
+function rnd(m,n) {
+  return Math.ceil(Math.random() * (n - m) + m);
+}
+
+// 包含n, 不包含m
+function rnd(m,n) {
+  return Math.floor(Math.random() * (n - m) + m);
+}
+
+```
+
+
 ## 参考链接
 
 - Addy Osmani, [Writing Modular JavaScript With AMD, CommonJS & ES Harmony](http://addyosmani.com/writing-modular-js/)
