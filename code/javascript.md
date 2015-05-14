@@ -59,7 +59,7 @@ exports.say = function () {
 {% endhighlight %}
 
 
-## javascript class 实现操作
+## javascript 操作样式 class 
 
 ### 方式一 最基本的方式
 
@@ -93,6 +93,8 @@ function addClass() {
 
 ````
 
+## 常用到的计算
+
 ### 获取 m 到 n 之间的整数随机数
 
 ```javascript
@@ -108,7 +110,22 @@ function rnd(m,n) {
 
 ```
 
-### IE浏览器版本低于8,提示用户升级
+### 角度弧度互转
+
+```javascript
+
+// 角度转弧度
+function a2d() {
+	
+}
+
+// 弧度转角度
+function d2a() {
+	
+}
+```
+
+## IE浏览器版本低于8,提示用户升级
 
 ```javascript
 
