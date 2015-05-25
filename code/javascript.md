@@ -165,8 +165,28 @@ if(window.attachEvent){
 }
 
 ```
+## 判断对象是否包含某个属性
 
+### hasOwnProperty 用来判断某个对象是否含有指定的自身属性。该方法会忽略掉那些从原型链上继承到的属性。
 
+```js
+//常规的方式，包括我之前在循环中判断都是以该值是否为空来判断的，其实：
+// 
+
+obj.hasOwnProperty(prop); 
+
+```
+
+### in, 判断对象中的属性，一个字符串类型的属性名或者数字类型的数组索引。包含自身属性及从父及（原型链中继承过来的属性）
+
+```js
+
+// 判断原型中有该属性，但是自己属性中没有的属性
+function hasPropertyInPrototype(obj, prop) {
+	return !obj.hasOwnProperty(prop) && prop in obj;
+}
+
+```
 ## 参考链接
 
 - Addy Osmani, [Writing Modular JavaScript With AMD, CommonJS & ES Harmony](http://addyosmani.com/writing-modular-js/)
