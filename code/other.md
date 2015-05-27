@@ -1,12 +1,47 @@
 ---
-title: linux 常用
+title: linux + mysql 常用
 layout: page
 category: code
 date: 2015-04-17
 modifiedOn: 2015-04-17
 ---
 
-## 概述
+## mysql 部分
+
+### "key" 在mysql中是关键字，配合 `hibernate` 使用时会出现意想不到的错误，应尽量避免使用关键字。
+
+
+
+
+
+
+
+
+
+
+## linux 部分
+
+### 常用的几个命令
+
+```shell
+cd /home/bskcare/....
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 CommonJS是服务器端模块的规范，Node.js采用了这个规范。
 
