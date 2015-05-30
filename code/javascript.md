@@ -114,14 +114,18 @@ function rnd(m,n) {
 
 ```javascript
 
-// 角度转弧度
-function a2d() {
-	
+/**
+ * 弧度转角度
+ */
+function a2d(n) {
+    return n * 180 / Math.PI;
 }
 
-// 弧度转角度
-function d2a() {
-	
+/**
+ * 角度转弧度
+ */
+function d2a(n) {
+    return n * Math.PI / 180;
 }
 ```
 
