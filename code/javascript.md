@@ -263,44 +263,6 @@ function isArray(obj) {
 
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 参考链接
-
-- Addy Osmani, [Writing Modular JavaScript With AMD, CommonJS & ES Harmony](http://addyosmani.com/writing-modular-js/)
-- Pony Foo, [A Gentle Browserify Walkthrough](http://blog.ponyfoo.com/2014/08/25/a-gentle-browserify-walkthrough)
-- 血糖高管,[xtgg.com](http://www.xtgg.com)
-- 云健康, [bskcare.com]
-
-
-
-
-
-
-
-
-
-
-
-
-[bskcare.com]: http://www.bskcare.com "云健康系统"
+- 笨笨狗，[Javascript数组类型检测：编写更强壮的isArray函数](http://scriptfans.iteye.com/blog/318821, "Javascript数组类型检测：编写更强壮的isArray函数")
+- 《JavaScript高级程序设计(3） - 第5章引用》
