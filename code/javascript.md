@@ -192,10 +192,167 @@ function hasPropertyInPrototype(obj, prop) {
 
 ```
 
+## 与 Array 相关的的
+
+### Array 的 remove 实现
+
+```javascript
+
+/**
+ * 删除数组中的元素，（下面的写法为以后js提供remove做兼容）
+ */
+Array.prototype.remove = Array.prototype.remove || function(obj) {
+	for (var i = 0; i < this.length; i++) {
+		if (this[i] == obj) {
+			this.splice(i, 1);
+			i--;
+		}
+	}
+}
+
+```
+
 ### 判断是否为数组类型 ： isArray
+
+#### 1、首先我会想到 `typeof` 来判断
+
+```js
+// typeof操作符。对于Function、String、Number、Undefined这几种类型的对象来说，不会有什么问题，但是针对Array的对象就没什么用途了： 
+
+typeof [] ;
+typeof null ； // 两个都返回object，其实是无法判断到底是不是数组的，
+```
+
+#### 2、于是，又想到了 `instanceof` ,`instanceof` 用来检测对象的原型链是否指向构造函数的prototype对象
+
+```js
+var arr = []; 
+alert(arr instanceof Array); // true 
+```
+
+#### 3、对象的`constructor`属性。除了`instanceof`，我们还可以利用每个对象都具有`constructor`的属性来判断其类型，于是乎我们可以这样做: 
+
+```js
+var arr = [];   
+alert(arr.constructor == Array); // true
+```
+
+#### 4、2/3在一般的情况下已经可以满足我们的需求，但是在某个包含多个框架（frame/iframe）页面的情况下却又不成立, 因为实际上就存在两个以上不同的全局执行环境，从而存在两个以上不同版本的`Array`构造函数 
+
+```js
+
+var iframe = document.createElement('iframe'); 
+document.body.appendChild(iframe); 
+xArray = window.frames[window.frames.length-1].Array; 
+var arr = new xArray(1,2,3); // [1,2,3] 
+// 哎呀！ 
+arr instanceof Array; // false 
+// 哎呀呀！ 
+arr.constructor === Array; // false
+
+//由于每个iframe都有一套自己的执行环境，跨frame实例化的对象彼此是不共享原型链的，因此导致上述检测代码失效
+```
+
+#### 5、最终解决方法
+
+```js
+
+function isArray(obj) {
+  return Object.prototype.toString.call(obj) === '[object Array]'; 
+}
+
+```
+
+### 使用sort对数组进行排序
+
+```js
+
+// 1、对数字进行排序
+
+var arr = [30, 0.3, 22,190, 311, 222];
+arr.sort();
+[0.3, 190, 22, 222, 30, 311] 	// 很显然结果不是我们想要的
+
+// ---
+var arr = [30, 0.3, 22,190, 311, 222];
+arr.sort(function(a,b) {
+	return a - b;
+});
+[0.3, 22, 30, 190, 222, 311]	// 结果正确	
+
+// 2、对字母进行排序
+
+var arr = ['Alert', 'CQ','banana'];
+
+console.info ( arr.sort() );
+// ["Alert", "CQ", "banana"] 	// 结果与我们预期的不同
+
+
+// --
+var arr = ['alert', 'cQ','banana'];
+
+console.info ( arr.sort() );
+// ["alert", "banana", "cQ"] // 似乎是我们想要的结果，往下看
+
+// --
+var arr = ['alert', 'cQ2','banana', 'cq1'];
+
+console.info ( arr.sort() );
+// ["alert", "banana", "cQ2", "cq1"] // 按理说cQ2应该排在cq1的后面，于是想到数字的比较方式
+
+// ---
+var arr = ['alert', 'cQ2','banana', 'cq1'];
+
+console.info ( arr.sort(function(a,b) {
+    return a - b;
+}) );
+["alert", "cQ2", "banana", "cq1"] // 这样也不行
+
+// ---
+var arr = ['alert', 'cQ2','banana', 'cq1'];
+
+console.info ( arr.sort(function(a,b) {
+    if( a > b) {
+        return 1;
+    } else if(a < b) {
+        return -1;
+    } else {
+        return 0;
+    }
+}) );
+// ["alert", "banana", "cQ2", "cq1"] 	//还是不行
+
+// ---
+var arr = ['alert', 'cQ2','banana', 'cq1'];
+
+console.info ( arr.sort(function(a,b) {
+    a = a.toLowerCase(), b = b.toLowerCase();
+
+    if( a > b) {
+        return 1;
+    } else if(a < b) {
+        return -1;
+    } else {
+        return 0;
+    }
+}) );
+//["alert", "banana", "cq1", "cQ2"] // 这才是我们想要的结果，（但对于B2，ba这两个该2在前还是在后需要根据需求在做处理了，这里默认是按照字符编码顺序来的。2->50,a -> 97)
+
+```
+> **说一下我们在这里犯过的几个错误**
+> 
+> - 操作符 `-` 的错误使用： 直接拿数字的比较方式对字母进行比较， 比如 a - b 的使用。操作数是字符串/boolean/null/undefined时，后台会调用Number()函数将其转化为数字，然后再根据相应的规则执行减法计算，如果转换结果是NaN，则减法结果就是NaN; `if(NaN) {}` 这样的条件永远不成立，则排序就无从谈起了。所以我们该用 `>` 和 `<` 判断。
+
+> - 操作符 `<` 和 `>`的错误使用： 对于数字是不会出现问题的，错误主要出现在对字符串（这里值得是字母组成的字符串，不对汉字进行讨论）的操作， 看一下个例子：
+> ```js
+> var result = "Brick" < "alphabet"; // true；
+> var result = "Brick".toLowerCase() < "alphabet".toLowerCase(); // false
+> ```
+> 原因：在比较字符串时，实际比较的是两个字符串中对应位置的每个字符的字符编码。已知大写字母的字符编码（A-Z -> 65-90）全部小于小写的字符编码(a-z -> 97-122) 。数字对应（0-9 -> 48-> 57）。
 
 
 
 ## 参考链接
-- 笨笨狗，[Javascript数组类型检测：编写更强壮的isArray函数](http://scriptfans.iteye.com/blog/318821, "Javascript数组类型检测：编写更强壮的isArray函数")
-- 《JavaScript高级程序设计(3） - 第5章引用》
+- isArray，[Javascript数组类型检测：编写更强壮的isArray函数](http://scriptfans.iteye.com/blog/318821, "Javascript数组类型检测：编写更强壮的isArray函数")
+- isArray，《JavaScript高级程序设计(3） - 第5章引用》
+- array排序部分， 《JavaScript高级程序设计(3） - 操作符/Number数值转换》
