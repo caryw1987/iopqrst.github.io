@@ -192,26 +192,6 @@ function hasPropertyInPrototype(obj, prop) {
 
 ```
 
-## 与 Array 相关的的
-
-### Array 的 remove 实现
-
-```javascript
-
-/**
- * 删除数组中的元素，（下面的写法为以后js提供remove做兼容）
- */
-Array.prototype.remove = Array.prototype.remove || function(obj) {
-	for (var i = 0; i < this.length; i++) {
-		if (this[i] == obj) {
-			this.splice(i, 1);
-			i--;
-		}
-	}
-}
-
-```
-
 ### 判断是否为数组类型 ： isArray
 
 
