@@ -214,54 +214,7 @@ Array.prototype.remove = Array.prototype.remove || function(obj) {
 
 ### 判断是否为数组类型 ： isArray
 
-#### 1、首先我会想到 `typeof` 来判断
 
-```js
-// typeof操作符。对于Function、String、Number、Undefined这几种类型的对象来说，不会有什么问题，但是针对Array的对象就没什么用途了： 
-
-typeof [] ;
-typeof null ； // 两个都返回object，其实是无法判断到底是不是数组的，
-```
-
-#### 2、于是，又想到了 `instanceof` ,`instanceof` 用来检测对象的原型链是否指向构造函数的prototype对象
-
-```js
-var arr = []; 
-alert(arr instanceof Array); // true 
-```
-
-#### 3、对象的`constructor`属性。除了`instanceof`，我们还可以利用每个对象都具有`constructor`的属性来判断其类型，于是乎我们可以这样做: 
-
-```js
-var arr = [];   
-alert(arr.constructor == Array); // true
-```
-
-#### 4、2/3在一般的情况下已经可以满足我们的需求，但是在某个包含多个框架（frame/iframe）页面的情况下却又不成立, 因为实际上就存在两个以上不同的全局执行环境，从而存在两个以上不同版本的`Array`构造函数 
-
-```js
-
-var iframe = document.createElement('iframe'); 
-document.body.appendChild(iframe); 
-xArray = window.frames[window.frames.length-1].Array; 
-var arr = new xArray(1,2,3); // [1,2,3] 
-// 哎呀！ 
-arr instanceof Array; // false 
-// 哎呀呀！ 
-arr.constructor === Array; // false
-
-//由于每个iframe都有一套自己的执行环境，跨frame实例化的对象彼此是不共享原型链的，因此导致上述检测代码失效
-```
-
-#### 5、最总解决方法
-
-```js
-
-function isArray(obj) {
-  return Object.prototype.toString.call(obj) === '[object Array]'; 
-}
-
-```
 
 ## 参考链接
 - 笨笨狗，[Javascript数组类型检测：编写更强壮的isArray函数](http://scriptfans.iteye.com/blog/318821, "Javascript数组类型检测：编写更强壮的isArray函数")
