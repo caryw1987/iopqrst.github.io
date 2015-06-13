@@ -23,7 +23,7 @@ modifiedOn: 2015-04-16
 - [如果我是一个老板](nonsense/if-i-were-a-boss.html)
 - [我应该从现有项目上吸取什么教训](nonsense/what-should-i-learn-from-the-existing-project.html)
 - [我们之间的差距仅仅只是一所大学吗?](nonsense/the-gap-between-us-just-a-university.html)
-- [为什么我宁愿选择孤单](why-i-prefer-to-be-alone.html)
+- [为什么我宁愿选择孤单](nonsense/why-i-prefer-to-be-alone.html)
 {% comment %}
 
 {% if site.posts.size != 0 %}
