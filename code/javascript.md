@@ -350,7 +350,34 @@ console.info ( arr.sort(function(a,b) {
 > ```
 > 原因：在比较字符串时，实际比较的是两个字符串中对应位置的每个字符的字符编码。已知大写字母的字符编码（A-Z -> 65-90）全部小于小写的字符编码(a-z -> 97-122) 。数字对应（0-9 -> 48-> 57）。
 
+### 页面加载完成，执行多个函数
 
+```js
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			oldonload();
+			func();
+		}
+	}
+}
+```
+
+### insertAfter 
+
+```js
+function insertAfter(newElement, targetElement) {
+	var parent = targetElement.parentNode;
+	if (parent.lastChild == targetElement) {
+		parent.appendChild(newElement);
+	} else {
+		parent.insertBefore(newElement, targetElement.nextSibling);
+	}
+}
+```
 
 ## 参考链接
 - isArray，[Javascript数组类型检测：编写更强壮的isArray函数](http://scriptfans.iteye.com/blog/318821, "Javascript数组类型检测：编写更强壮的isArray函数")
