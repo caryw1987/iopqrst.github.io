@@ -379,6 +379,36 @@ function insertAfter(newElement, targetElement) {
 }
 ```
 
+### resize image
+
+```js
+// 忘了从哪里复制的了
+var resizePicWidth = function(selector, pic_width) {
+	$(selector + " img").each(function() {
+		var img = $(this);
+		var realWidth; //真实的宽度
+		var realHeight; //真实的高度
+		//这里做下说明，$("<img/>")这里是创建一个临时的img标签，类似js创建一个new Image()对象！
+		$("<img/>").attr("src", $(img).attr("src")).load(function() {
+			/*
+			  如果要获取图片的真实的宽度和高度有三点必须注意
+			  1、需要创建一个image对象：如这里的$("<img/>")
+			  2、指定图片的src路径
+			  3、一定要在图片加载完成后执行如.load()函数里执行
+			 */
+			realWidth = this.width;
+			realHeight = this.height;
+			//如果真实的宽度大于规定的宽度就按照100%显示
+			if (realWidth >= pic_width) {
+				$(img).css("width", (pic_width) + "px");
+			} else { //如果小于浏览器的宽度按照原尺寸显示
+				$(img).css("width", realWidth + 'px');
+			}
+		});
+	});
+};
+```
+
 ## 参考链接
 - isArray，[Javascript数组类型检测：编写更强壮的isArray函数](http://scriptfans.iteye.com/blog/318821, "Javascript数组类型检测：编写更强壮的isArray函数")
 - isArray，《JavaScript高级程序设计(3） - 第5章引用》
