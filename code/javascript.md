@@ -450,6 +450,83 @@ var resizePicWidth = function(selector, pic_width) {
 })(jQuery);
 ```
 
+### 点点滴滴
+
+````js
+
+* Get element by id
+ */	
+function get(element){
+	if (typeof element == "string")
+		element = d.getElementById(element);
+	return element;
+}
+
+/**
+ * Attaches event to a dom element
+ */
+function addEvent(el, type, fn){
+	if (w.addEventListener){
+		el.addEventListener(type, fn, false);
+	} else if (w.attachEvent){
+		var f = function(){
+		  fn.call(el, w.event);
+		};			
+		el.attachEvent('on' + type, f)
+	}
+}
+
+
+/**
+ * Creates and returns element from html chunk
+ */
+var toElement = function(){
+	var div = d.createElement('div');
+	return function(html){
+		div.innerHTML = html;
+		var el = div.childNodes[0];
+		div.removeChild(el);
+		return el;
+	}
+}();
+
+function hasClass(ele,cls){
+	return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+	if (!hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+	var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+	ele.className=ele.className.replace(reg,' ');
+}
+
+/**
+ * 根据样式名称（单个）获取元素
+ * @param {Object} obj 在那个元素下查找 document/[元素对象]
+ * @param {Object} cls 样式名称
+ */
+function getClassEles(obj, cls) {
+	if (obj.getElementsByClassName) {
+		return obj.getElementsByClassName(cls);
+	} else {
+		var tags = obj.getElementsByTagName('*');
+		var aTargetEles = [];
+
+		var oReg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+		for (var i = 0; i < tags.length; i++) {
+			if (tags[i].className.match(oReg)) {
+				aTargetEles.push(tags[i]);
+			}
+		}
+		return aTargetEles;
+	}
+}
+
+````
+
 ## 参考链接
 - isArray，[Javascript数组类型检测：编写更强壮的isArray函数](http://scriptfans.iteye.com/blog/318821, "Javascript数组类型检测：编写更强壮的isArray函数")
 - isArray，《JavaScript高级程序设计(3） - 第5章引用》
